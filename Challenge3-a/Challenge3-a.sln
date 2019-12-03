@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3-a_API", "Challenge3-a_API\Challenge3-a_API.csproj", "{652BB74A-DD49-4A3B-9CF8-F4239A32DFB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{652BB74A-DD49-4A3B-9CF8-F4239A32DFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652BB74A-DD49-4A3B-9CF8-F4239A32DFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652BB74A-DD49-4A3B-9CF8-F4239A32DFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652BB74A-DD49-4A3B-9CF8-F4239A32DFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CAAA53B-762D-403B-A86A-1888419C0AE7}
+	EndGlobalSection
+EndGlobal

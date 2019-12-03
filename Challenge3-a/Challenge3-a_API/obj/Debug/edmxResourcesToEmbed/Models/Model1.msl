@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="civapiModelStoreContainer" CdmEntityContainer="civapiEntities">
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="civapiModel.Book">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="publishedYear" ColumnName="publishedYear" />
+          <ScalarProperty Name="borrower" ColumnName="borrower" />
+          <ScalarProperty Name="author" ColumnName="author" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Borrowers">
+      <EntityTypeMapping TypeName="civapiModel.Borrower">
+        <MappingFragment StoreEntitySet="Borrower">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
