@@ -15,6 +15,18 @@ namespace Challenge3_a_API
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+            name: "NotBorrowed",
+            routeTemplate: "api/Books/Borrowed",
+            defaults: new { controller = "Books", action = "Borrowed", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "hkhkhkhk",
+                routeTemplate: "api/Books/{id}",
+                defaults: new { controller = "Books", action = "GetBooks", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }

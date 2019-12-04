@@ -17,9 +17,19 @@ namespace Challenge3_a_API.Controllers
         private civapiEntities db = new civapiEntities();
 
         // GET: api/Borrowers
-        public IQueryable<Borrower> GetBorrowers()
+        public List<Borrowerview> GetBorrowers()
         {
-            return db.Borrowers;
+            List<Borrower> list = (from a in db.Borrowers select a).ToList();
+            List<Borrowerview> newlist = new List<Borrowerview>();
+            foreach (Borrower b in list)
+            {
+                int newid = b.id;
+                string newFirstname = b.Firstname;
+                string newSurname = b.Surname;
+                string newDOB = b.DOB;
+                newlist.Add(new Borrowerview(newid, newFirstname,newSurname,newDOB));
+            }
+            return newlist;
         }
 
         // GET: api/Borrowers/5

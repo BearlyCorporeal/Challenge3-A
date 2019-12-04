@@ -34,25 +34,32 @@ namespace Challenge3_a_API.Controllers
         [ResponseType(typeof(Book))]
         public List<Bookview> GetBook(string id)
         {
-
             List<Book> list = (from a in db.Books select a).ToList();
             List<Bookview> newlist = new List<Bookview>();
             if (id == "NotBorrowed")
             {
                 list = (from s in db.Books where s.borrower == null select s).ToList();
+                foreach (Book b in list)
+                {
+                    int newISBN = b.ISBN;
+                    string newtitle = b.title;
+                    
+                    newlist.Add(new Bookview(newISBN, newtitle));
+                }
             }
-            if (id == "Borrowed")
-            {
-                list = (from s in db.Books where s.borrower != null select s).ToList();
-            }
-            foreach (Book b in list)
-            {
-                int newISBN = b.ISBN;
-                string newtitle = b.title;
-                newlist.Add(new Bookview(newISBN, newtitle));
-            }
+            
             return newlist;
         }
+
+        // GET: api/Books
+        [HttpGet]
+        public List<Book> Borrowed()
+        {
+            List<Book> list = (from a in db.Books select a).ToList();
+            list = (from s in db.Books where s.borrower != null select s).ToList();
+            return list;
+        }
+
 
         // PUT: api/Books/5
         [ResponseType(typeof(void))]
